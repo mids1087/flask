@@ -1,4 +1,5 @@
 from flask import Flask
+import logging
 
 app = Flask(__name__)
 
@@ -10,6 +11,7 @@ def index():
 @app.route('/hello')
 @app.route('/ciao')          #可以叠加的绑定
 def say_hello():
+    # print('asdfsadfasdf')   #这句命令会出现在控制台
     return '<h1>hello flask!</h1>'
 
 # route with var 
